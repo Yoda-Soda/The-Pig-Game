@@ -2,7 +2,8 @@
 
 Pig is a simple dice game described as a "jeopardy dice game".For jeopardy dice games, the dominant type of decision is whether or not to jeopardise previous gains by rolling for potential greater gains.
 
-##Gameplay
+## Gameplay
+
 Each turn, a player repeatedly rolls a dice until either a 1 is rolled or the player decides to "hold":
 
 - If the player rolls a 1, they score nothing and it becomes the next player's turn.
