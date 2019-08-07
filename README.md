@@ -15,8 +15,6 @@ For example, the first player, Donald, begins a turn with a roll of 5. Donald co
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 The files can be uploaded to any webserver and/or just run by opening up the index.html in any browser
 
 ### Prerequisites
@@ -24,10 +22,10 @@ The files can be uploaded to any webserver and/or just run by opening up the ind
 Any modern web browser
 
 ```
-Google Chrome
-Mozilla Firefox
-Opera
-Safari
+* Google Chrome
+* Mozilla Firefox
+* Opera
+* Safari
 ```
 
 ### Installing
@@ -48,10 +46,6 @@ git clone https://github.com/Yoda-Soda/The-Pig-Game.git
 - [HTML](https://www.w3.org/standards/webdesign/htmlcss) - Used as the markup language to descibe the structure of the web page
 - [CSS](https://www.w3.org/standards/webdesign/htmlcss) - Used for describing the presentation of the web pages
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Scipting language used to manipulate the web page
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
