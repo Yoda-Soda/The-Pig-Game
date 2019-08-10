@@ -43,13 +43,13 @@ function changeStatus() {
   }
 }
 
-//checks to see if player has rolled a 1
-function checkDice(diceCurrent) {
-  if (diceCurrent == 1) return false;
-  else {
-    return true;
-  }
-}
+// //checks to see if player has rolled a 1
+// function checkDice(diceCurrent) {
+//   if (diceCurrent == 1) return false;
+//   else {
+//     return true;
+//   }
+// }
 
 //adds the dice value to the current score of the player and resets it if 1 is thrown
 function addDice(diceCurrent) {
@@ -69,9 +69,9 @@ function addDice(diceCurrent) {
 
 function hold() {
   if (finalScore1 >= 100) {
-    alert("Player 1 Wins!!!");
+    displayWinner("Player 1");
   } else if (finalScore2 >= 100) {
-    alert("Player 1 Wins!!!");
+    displayWinner("Player 2");
   } else {
     if (status == 1) {
       finalScore1 = currentScoreCounter + finalScore1;
@@ -121,14 +121,8 @@ function checkStatus() {
   }
 }
 
-// //testing values to console log
-// console.log(
-//   currentScore1,
-//   currentScore2,
-//   finalScore1,
-//   finalScore2,
-//   active1,
-//   active2,
-//   status,
-//   diceCurrent
-// );
+function displayWinner(winner) {
+  document.getElementById("overlay").style.display = "grid";
+  document.getElementById("overlay").getElementsByTagName("h1").innerHTML =
+    "The winner is: " + winner;
+}
