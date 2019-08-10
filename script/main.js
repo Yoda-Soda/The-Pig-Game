@@ -20,6 +20,7 @@ diceCurrent = 6;
 status = 1;
 
 // add event handlers
+<<<<<<< HEAD
 var btnRoll1,
   btnRoll2,
   btnHold1,
@@ -27,6 +28,9 @@ var btnRoll1,
   btnNewGame,
   btnOverlay,
   btnInstructions;
+=======
+var btnRoll1, btnRoll2, btnHold1, btnHold2, btnNewGame, btnOverlay;
+>>>>>>> 3840f327b020d75e8194ccae3227b4f6279a5468
 //Player 1 dice roll button
 btnRoll1 = document.getElementById("btn-roll-1");
 btnRoll1.addEventListener("click", rollDice);
@@ -45,12 +49,15 @@ btnNewGame.addEventListener("click", newGame);
 //Start new game by reseting values and caling status check
 btnOverlay = document.getElementById("overlay");
 btnOverlay.addEventListener("click", newGame);
+<<<<<<< HEAD
 //Show instructions overlay
 btnInstOverlay = document.getElementById("inst");
 btnInstOverlay.addEventListener("click", removeInstruction);
 //Show instructions overlay
 btnInstructions = document.getElementById("btn-instruction");
 btnInstructions.addEventListener("click", instructions);
+=======
+>>>>>>> 3840f327b020d75e8194ccae3227b4f6279a5468
 
 //togles between players
 function changeStatus() {
@@ -187,6 +194,7 @@ function newGame() {
     document.getElementById("overlay").style.display = "none";
   }
   checkStatus();
+<<<<<<< HEAD
 }
 
 //brings overlay to show winner
@@ -196,4 +204,6 @@ function instructions() {
 
 function removeInstruction() {
   btnInstOverlay.style.display = "none";
+=======
+>>>>>>> 3840f327b020d75e8194ccae3227b4f6279a5468
 }
