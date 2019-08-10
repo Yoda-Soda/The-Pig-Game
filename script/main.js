@@ -14,62 +14,53 @@ var btnOverlay = addClickListener("overlay", newGame);
 var btnInstOverlay = addClickListener("inst", removeInstruction);
 var btnInstructions = addClickListener("btn-instruction", instructions);
 
-var targetScore = 10;
+var targetScore = 100;
 
-function getPlayer(id)
-{
-  var player = 
-  { 
-    Id : id,
-    RollButton : addClickListener("btn-roll-" + id, rollDice),
-    HoldButton : addClickListener("btn-hold-" + id, hold),
-    ActiveArea : document.getElementById("player-area-" + id),
-    CurrentScoreBoard : document.getElementById("current-scoreboard-" + id),
-    TotalScoreBoard : document.getElementById("scoreboard-player-" + id),
-    Active : false,    
-    CurrentScore : 0,
-    TotalScore : 0,
-    addCurrentScore: function(score) 
-    { 
+// todo move this out to a seperate class
+function getPlayer(id) {
+  var player = {
+    Id: id,
+    RollButton: addClickListener("btn-roll-" + id, rollDice),
+    HoldButton: addClickListener("btn-hold-" + id, hold),
+    ActiveArea: document.getElementById("player-area-" + id),
+    CurrentScoreBoard: document.getElementById("current-scoreboard-" + id),
+    TotalScoreBoard: document.getElementById("scoreboard-player-" + id),
+    Active: false,
+    CurrentScore: 0,
+    TotalScore: 0,
+    addCurrentScore: function (score) {
       this.CurrentScore += score;
       this.CurrentScoreBoard.innerHTML = this.CurrentScore;
     },
-    resetCurrentScore: function() 
-    { 
+    resetCurrentScore: function () {
       this.CurrentScore = 0;
       this.CurrentScoreBoard.innerHTML = this.CurrentScore;
     },
-    hold: function() 
-    { 
+    hold: function () {
       this.TotalScore += this.CurrentScore;
       this.TotalScoreBoard.innerHTML = this.TotalScore;
       this.ResetCurrentScore();
       SwitchPlayers();
     },
-    isWinner: function() 
-    { 
-      if (this.TotalScore + this.CurrentScore >= targetScore)
-      {
+    isWinner: function () {
+      if (this.TotalScore + this.CurrentScore >= targetScore) {
         displayWinner();
       }
     },
-    fullReset: function()
-    {
+    fullReset: function () {
       this.TotalScore = 0;
       this.CurrentScore = 0;
-      
+
       this.CurrentScoreBoard.innerHTML = this.CurrentScore;
       this.TotalScoreBoard.innerHTML = this.TotalScore;
       SwitchPlayers();
     },
-    enable: function()
-    {
+    enable: function () {
       this.ActiveArea.style.backgroundColor = "#fff";
       this.HoldButton.style.visibility = "visible";
       this.RollButton.style.visibility = "visible";
     },
-    disable: function()
-    {
+    disable: function () {
       this.ActiveArea.style.backgroundColor = "#f5f4f4";
       this.HoldButton.style.visibility = "hidden";
       this.RollButton.style.visibility = "hidden";
@@ -80,46 +71,38 @@ function getPlayer(id)
 
 
 // get an element by name and bind its on click event to the given event
-function addClickListener(elementName, event)
-{
+function addClickListener(elementName, event) {
   var button = document.getElementById(elementName);
   button.addEventListener("click", event);
   return button;
 }
 
 //togles between players
-function switchPlayers() 
-{
+function switchPlayers() {
   var temp = currentPlayer;
   currentPlayer.Disable();
   otherPlayer.Enable();
-  
+
   currentPlayer = otherPlayer;
   otherPlayer = temp;
 }
 
 //adds the dice value to the current score of the player and resets it if 1 is thrown and change to other player
-function addDice(diceCurrent) 
-{
-  if (diceCurrent != 1) 
-  {
+function addDice(diceCurrent) {
+  if (diceCurrent != 1) {
     currentPlayer.addCurrentScore(diceCurrent);
-  } 
-  else 
-  {
+  } else {
     currentPlayer.ResetCurrentScore();
-    SwitchPlayers(); 
+    SwitchPlayers();
   }
 }
 
 //checks if a player has reached a score of
 //100 and activates overlay else it's moves and adds the current score to the finalscore value
-function hold() 
-{
-  if (!currentPlayer.isWinner())
-  {
+function hold() {
+  if (!currentPlayer.isWinner()) {
     currentPlayer.hold();
-    
+
   }
 }
 
@@ -128,7 +111,7 @@ function rollDice() {
   var rand = Math.random();
   diceCurrent = Math.round(rand * 5) + 1;
   diceImage.attributes.getNamedItem("src").nodeValue =
-  "images/dice-" + diceCurrent + ".png";
+    "images/dice-" + diceCurrent + ".png";
   addDice(diceCurrent);
 }
 
@@ -137,21 +120,21 @@ function rollDice() {
 function displayWinner() {
   document.getElementById("overlay").style.display = "grid";
   document.getElementById("winner").innerHTML =
-  "The winner is player " + currentPlayer.Id;
+    "The winner is player " + currentPlayer.Id;
 }
 
 //resets all variables, applies those variables to dom and resets player area to player 1
 function newGame() {
-  
+
   player1.fullReset();
   player2.fullReset();
-  
+
   currentPlayer = player1;
   otherPlayer = player2;
-  
+
   diceImage.attributes.getNamedItem("src").nodeValue =
-  "images/dice-" + diceCurrent + ".png";
-  
+    "images/dice-" + diceCurrent + ".png";
+
   // todo: is this useful?
   if (document.getElementById("overlay").style.display == "grid") {
     console.log("it is true");
