@@ -58,22 +58,26 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Raleway", sans-serif;
-  font-size: 12px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 footer a {
+  font-size: 10px;
   color: #ee8a18;
   text-decoration: none;
 }
 
 footer p:first-child {
-  font-size: 20px;
+  font-size: 10px;
 }
 
-footer p:first-child:hover {
+footer button {
+  font-size: 25px;
+}
+
+footer button:first-child:hover {
   cursor: pointer;
+  color: #eb4d4d;
 }
 
 main {
@@ -315,4 +319,41 @@ button:focus {
   font-size: 1.5rem;
   font-weight: 900;
   text-shadow: 1px 1px 3px #2b2b2b;
+}
+
+#inst {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14vh 20vw;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Black background with opacity */
+  z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#inst h1 {
+  color: #eb4d4d;
+  padding-bottom: 15px;
+}
+#inst ul {
+  margin-left: 12px;
+  padding: 5px;
+  width: 65%;
+}
+#inst li {
+  margin-left: 15px;
+}
+
+#inst p {
+  width: 65%;
 }
