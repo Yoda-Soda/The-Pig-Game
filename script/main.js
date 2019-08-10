@@ -39,8 +39,8 @@ function getPlayer(id) {
     hold: function () {
       this.TotalScore += this.CurrentScore;
       this.TotalScoreBoard.innerHTML = this.TotalScore;
-      this.ResetCurrentScore();
-      SwitchPlayers();
+      this.resetCurrentScore();
+      switchPlayers();
     },
     isWinner: function () {
       if (this.TotalScore + this.CurrentScore >= targetScore) {
@@ -53,7 +53,7 @@ function getPlayer(id) {
 
       this.CurrentScoreBoard.innerHTML = this.CurrentScore;
       this.TotalScoreBoard.innerHTML = this.TotalScore;
-      SwitchPlayers();
+      switchPlayers();
     },
     enable: function () {
       this.ActiveArea.style.backgroundColor = "#fff";
@@ -69,7 +69,6 @@ function getPlayer(id) {
   return player;
 }
 
-
 // get an element by name and bind its on click event to the given event
 function addClickListener(elementName, event) {
   var button = document.getElementById(elementName);
@@ -80,8 +79,8 @@ function addClickListener(elementName, event) {
 //togles between players
 function switchPlayers() {
   var temp = currentPlayer;
-  currentPlayer.Disable();
-  otherPlayer.Enable();
+  currentPlayer.disable();
+  otherPlayer.enable();
 
   currentPlayer = otherPlayer;
   otherPlayer = temp;
@@ -92,8 +91,8 @@ function addDice(diceCurrent) {
   if (diceCurrent != 1) {
     currentPlayer.addCurrentScore(diceCurrent);
   } else {
-    currentPlayer.ResetCurrentScore();
-    SwitchPlayers();
+    currentPlayer.resetCurrentScore();
+    switchPlayers();
   }
 }
 
@@ -102,7 +101,6 @@ function addDice(diceCurrent) {
 function hold() {
   if (!currentPlayer.isWinner()) {
     currentPlayer.hold();
-
   }
 }
 
