@@ -62,13 +62,13 @@ footer {
 }
 
 footer a {
-  font-size: 10px;
   color: #ee8a18;
   text-decoration: none;
 }
 
-footer p:first-child {
-  font-size: 10px;
+footer a,
+footer p {
+  font-size: 12px;
 }
 
 footer button {
@@ -187,9 +187,9 @@ main {
 #dice {
   grid-column: 4/6;
   grid-row: 3/4;
-
   width: 100%;
   border-radius: 25px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04);
 }
 
 #btn-roll-1 {
