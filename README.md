@@ -1,6 +1,6 @@
 # The-Pig-Game
 
-Pig is a simple dice game described as a "jeopardy dice game".For jeopardy dice games, the dominant type of decision is whether or not to jeopardise previous gains by rolling for potential greater gains.
+Pig is a simple dice game described as a "jeopardy dice game".For jeopardy dice games, the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains.
 
 ## Gameplay
 
@@ -21,12 +21,10 @@ The files can be uploaded to any webserver and/or just run by opening up the ind
 
 Any modern web browser
 
-```
-* Google Chrome
-* Mozilla Firefox
-* Opera
-* Safari
-```
+- Google Chrome
+- Mozilla Firefox
+- Opera
+- Safari
 
 ### Installing
 
@@ -34,7 +32,7 @@ A simple git clone into directory of choice would be all that's needed.
 
 Via the terminal:
 
-```
+``` terminal
 git clone https://github.com/Yoda-Soda/The-Pig-Game.git
 ```
 
@@ -43,13 +41,13 @@ git clone https://github.com/Yoda-Soda/The-Pig-Game.git
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/) - The IDE used to write the code
 - [Adobe Xd](https://www.adobe.com/products/xd.html) - Used to create mock-up
 - [Adobe Id](https://www.adobe.com/products/illustrator.html) - Used to create artwork
-- [HTML](https://www.w3.org/standards/webdesign/htmlcss) - Used as the markup language to descibe the structure of the web page
+- [HTML](https://www.w3.org/standards/webdesign/htmlcss) - Used as the markup language to describe the structure of the web page
 - [CSS](https://www.w3.org/standards/webdesign/htmlcss) - Used for describing the presentation of the web pages
-- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Scipting language used to manipulate the web page
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Scripting language used to manipulate the web page
 
 ## Versioning
 
-v0.1 - initual beta
+v0.1 - initial beta
 
 ## Authors
 
