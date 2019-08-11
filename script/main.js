@@ -122,11 +122,11 @@ function displayWinner() {
 
 //resets all variables, applies those variables to dom and resets player area to player 1
 function newGame() {
-  player1.fullReset();
-  player2.fullReset();
-
   currentPlayer = player1;
   otherPlayer = player2;
+
+  player1.fullReset();
+  player2.fullReset();
 
   diceImage.attributes.getNamedItem("src").nodeValue = "images/dice-0.png";
 
