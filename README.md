@@ -2,6 +2,10 @@
 
 Pig is a simple dice game described as a "jeopardy dice game".For jeopardy dice games, the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains.
 
+## Live site with current branch
+
+Visit [The Pig Head Game](https://the-pig-game.yoda-soda.now.sh/)
+
 ## Gameplay
 
 Each turn, a player repeatedly rolls a dice until either a 1 is rolled or the player decides to "hold":
@@ -32,7 +36,7 @@ A simple git clone into directory of choice would be all that's needed.
 
 Via the terminal:
 
-``` terminal
+```terminal
 git clone https://github.com/Yoda-Soda/The-Pig-Game.git
 ```
 
