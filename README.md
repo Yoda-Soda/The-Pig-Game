@@ -4,7 +4,7 @@ Pig is a simple dice game described as a "jeopardy dice game".For jeopardy dice 
 
 ## Live site with current branch
 
-Visit [The Pig Head Game](http://pig.janclaasen.design/
+Visit [The Pig Head Game](http://pig.janclaasen.design/)
 
 ## Gameplay
 
